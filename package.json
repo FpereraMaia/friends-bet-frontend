@@ -1,0 +1,26 @@
+{
+  "name": "friends-bet-front",
+  "version": "1.0.0",
+  "description": "Project to develop front end for bet manager system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FpereraMaia/friends-bet-frontend.git"
+  },
+  "keywords": [
+    "bet",
+    "manager",
+    "socces",
+    "brazilian",
+    "championsip"
+  ],
+  "author": "Felipe Maia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FpereraMaia/friends-bet-frontend/issues"
+  },
+  "homepage": "https://github.com/FpereraMaia/friends-bet-frontend#readme"
+}

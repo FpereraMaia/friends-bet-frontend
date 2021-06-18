@@ -39,5 +39,8 @@
   "dependencies": {
     "datatables.net": "^1.10.25",
     "datatables.net-dt": "^1.1.0"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }

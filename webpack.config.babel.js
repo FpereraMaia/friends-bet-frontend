@@ -25,12 +25,12 @@ export default {
     stats: {
         colors: true
     },
-    devtool: 'source-map',
-    watch: true,
+    // devtool: 'source-map'
+    // watch: true,
 
-    devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        compress: true,
-        port: 9000,
-      },
+    // devServer: {
+    //     contentBase: path.join(__dirname, 'dist'),
+    //     compress: true,
+    //     port: 9000,
+    //   },
 };

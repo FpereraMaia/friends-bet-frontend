@@ -1,13 +1,12 @@
-import {API_URL} from "../config";
+import {configs} from "../config";
 
 export class Standings {
 
     STANDINGS_URL = "/standings";
-    FULL_URL = API_URL + this.STANDINGS_URL;
+    FULL_URL = configs.API_URL + this.STANDINGS_URL;
 
-    getAll(championshipId) {
-        fetch(this.FULL_URL + `/${championshipId}`)
-            .then(response => response.json())
-            .then(data => console.log(data));
+    getAll(championshipId, callbackStandingsTable) {
+        return fetch(this.FULL_URL + `/${championshipId}`)
+            .then(response => response.json());
     }
 }

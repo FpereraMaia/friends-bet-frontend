@@ -4,6 +4,8 @@
   "description": "Project to develop front end for bet manager system",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
+    "serve": "webpack serve --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,7 +15,7 @@
   "keywords": [
     "bet",
     "manager",
-    "socces",
+    "soccer",
     "brazilian",
     "championsip"
   ],
@@ -22,5 +24,20 @@
   "bugs": {
     "url": "https://github.com/FpereraMaia/friends-bet-frontend/issues"
   },
-  "homepage": "https://github.com/FpereraMaia/friends-bet-frontend#readme"
+  "homepage": "https://github.com/FpereraMaia/friends-bet-frontend#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/register": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.39.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "datatables.net": "^1.10.25",
+    "datatables.net-dt": "^1.1.0"
+  }
 }

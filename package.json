@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve --mode=development",
+    "serve": "webpack serve --mode=development",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -38,7 +39,8 @@
   },
   "dependencies": {
     "datatables.net": "^1.10.25",
-    "datatables.net-dt": "^1.1.0"
+    "datatables.net-dt": "^1.1.0",
+    "express": "^4.17.1"
   },
   "engines": {
     "node": "16.x"

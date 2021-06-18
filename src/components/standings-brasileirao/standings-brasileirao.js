@@ -99,7 +99,6 @@ export class StandingsBrasileirao extends HTMLElement {
 
     attributeChangedCallback(name, oldVal, newVal) {
         if (oldVal !== newVal) {
-            console.log(name);
           switch(name) {
               case 'standings':
                   this.standings = newVal;

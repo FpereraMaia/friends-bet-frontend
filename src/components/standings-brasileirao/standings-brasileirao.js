@@ -17,14 +17,18 @@ const templateString = `
     <h2>
         Classificação
     </h2>
-    <small class="text-muted"><span id="updatedAt"> </span></small>
 </header>
+<bet-loader></bet-loader>
 <table class="table">
     <thead class="table-head-brasileirao">
     </thead>
     <tbody class="table-body-brasileirao">
     </tbody>
 </table>
+<small class="text-muted">
+    Atualizado em: <span id="updatedAt"> </span>
+</small>
+
 `;
 const template = document.createElement("template");
 template.innerHTML = templateString;
@@ -45,6 +49,7 @@ export class StandingsBrasileirao extends HTMLElement {
 
         this.tableElement = this.querySelector("table");
         this.tbodyElement = this.tableElement.querySelector("tbody");
+        this.betLoader = this.querySelector("bet-loader");
 
         if(!this.standings) {
             this.standings = [];
@@ -66,6 +71,8 @@ export class StandingsBrasileirao extends HTMLElement {
                 tr.appendChild(this.getPositionTd(element));
                 this.tbodyElement.appendChild(tr);
             });
+
+            this.betLoader.setAttribute("show", false);
         }
     }
 

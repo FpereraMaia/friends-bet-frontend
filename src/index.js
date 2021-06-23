@@ -1,11 +1,10 @@
-import {StandingsBrasileirao} from "./components/standings-brasileirao/standings-brasileirao";
-import {Standings} from "./requests/standings";
-// import {MDCDataTable} from '@material/data-table';
+import {RegisterComponent} from "./components/register-components";
+import { Ranking } from "./requests/ranking";
+import { Standings } from "./requests/standings";
 
 // register web component
-if (!customElements.get('tandings-brasileirao')) {
-    window.customElements.define('standings-brasileirao', StandingsBrasileirao);    
-}
+const registerComponent = new RegisterComponent();
+registerComponent.run();
 
 // fixed for now, 1 == brasileirao
 const CHAMPIONSHIP_ID = 1;
@@ -13,3 +12,7 @@ const CHAMPIONSHIP_ID = 1;
 var standings = new Standings();
 var promiseStandings = standings.getAll(CHAMPIONSHIP_ID);
 promiseStandings.then(data => document.querySelector("standings-brasileirao").setAttribute("standings", JSON.stringify(data)));
+
+var ranking = new Ranking(standings);
+var promiseRanking = ranking.getAll(CHAMPIONSHIP_ID);
+promiseRanking.then(data => document.querySelector("bet-ranking").setAttribute("ranking", JSON.stringify(data)));

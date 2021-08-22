@@ -25,9 +25,6 @@ const templateString = `
     <tbody class="table-body-brasileirao">
     </tbody>
 </table>
-<small class="text-muted">
-    Atualizado em: <span id="updatedAt"> </span>
-</small>
 
 `;
 const template = document.createElement("template");
@@ -60,12 +57,6 @@ export class StandingsBrasileirao extends HTMLElement {
 
     render() {
         if(this.standings){
-            let updatedAtSpan = document.querySelector("#updatedAt");
-            let updatedAt = new Date(this.standings[0].updated_at);
-            let updatedText = document.createTextNode(updatedAt.toLocaleString("pt-BR"));
-
-            updatedAtSpan.appendChild(updatedText);
-
             this.standings.forEach(element => {
                 let tr = document.createElement("tr");
                 tr.appendChild(this.getPositionTd(element));

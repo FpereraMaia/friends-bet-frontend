@@ -79,7 +79,7 @@ export class BettorAudit extends HTMLElement {
     getAccordionBody(bettor) {
         let accordionBody = document.createElement("div");
         accordionBody.classList.add("accordion-body");
-        console.log(bettor);
+
         const betsTable = this.getBetsTable(bettor.bets);
         accordionBody.appendChild(betsTable);
 

@@ -1,12 +1,14 @@
 import { StandingsBrasileirao } from "./standings-brasileirao/standings-brasileirao";
 import { BetRanking } from "./bet-ranking/bet-ranking";
 import { Loading } from "./loading/loading";
+import { BettorAudit } from "./bettor-audit/bettor-audit";
 
 export class RegisterComponent {
     COMPONENTS = {
         'standings-brasileirao': StandingsBrasileirao,
         'bet-ranking': BetRanking,
-        'bet-loader': Loading
+        'bet-loader': Loading,
+        'bettor-audit': BettorAudit
     }
 
     run() {
